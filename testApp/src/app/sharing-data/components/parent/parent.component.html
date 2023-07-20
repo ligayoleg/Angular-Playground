@@ -1,3 +1,14 @@
-<p>parent</p>
-<!-- <app-child ></app-child> -->
+<h4>Parent</h4>
+<div class="row">
+  <h6>Message to child</h6>
+  <app-child [messageFromParent]="'Hello, child!'"></app-child>
+</div>
+<div class="row">
+  <h6>Message from child</h6>
+  <app-child  (messageFromChild)="receiveMessageFromChild($event)"></app-child>
+  <p>{{messageFromChild}}</p>
+</div>
+
+
+
 

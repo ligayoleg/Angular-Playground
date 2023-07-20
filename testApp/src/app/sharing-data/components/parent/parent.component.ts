@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
   title = 'parent';
-
+  messageFromChild: string = '';
   ngOnInit(): void {
 
+  }
+
+  receiveMessageFromChild(message: string){
+    this.messageFromChild = message;
   }
 }
