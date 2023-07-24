@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { SharedDataService } from '../../services/shared-data.service';
 
 @Component({
   selector: 'app-child',
@@ -7,15 +8,27 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent implements OnInit{
   title = 'child';
+  messageUsingService: string = '';
 
   @Input() messageFromParent: string = '';
   @Output() messageFromChild = new EventEmitter<string>();
 
-  ngOnInit(): void {
+  constructor(private sharedDataService: SharedDataService){}
 
+  ngOnInit(): void {
+    this.sharedDataService.getData()
+    .subscribe({
+      next: res =>  this.messageUsingService = res,
+      error: err => console.log(err),
+      complete: () =>  console.log(`Data complete`)
+    });
   }
 
   sendMessageFromChild(value: string){
     this.messageFromChild.emit(value);
+  }
+
+  getMessageUsingService(){
+
   }
 }
