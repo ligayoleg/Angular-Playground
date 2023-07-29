@@ -13,6 +13,8 @@ import { OfComponent } from './rxjs/components/of/of.component';
 import { TestComponent } from './test/test.component';
 import { NavComponent } from './layout/nav/components/nav.component';
 import { HomeComponent } from './layout/home/components/home.component';
+import { OtherChildComponent } from './sharing-data/components/otherChild/other-child.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { HomeComponent } from './layout/home/components/home.component';
     ChildComponent,
     OfComponent,
     OperatorsComponent,
-    TestComponent
+    TestComponent,
+    OtherChildComponent
   ],
   imports: [
     BrowserModule,

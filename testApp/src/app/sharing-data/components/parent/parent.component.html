@@ -1,13 +1,21 @@
 <div class="container-fluid">
   <h4>Parent</h4>
 <div class="row">
-  <h6>Message to child</h6>
-  <app-child [messageFromParent]="'Hello, child!'"></app-child>
+  <div class="col-lg-6">
+    <h6>Message to child</h6>
+    <app-child [messageFromParent]="'Hello, child!'"></app-child>
+  </div>
+  <div class="col-lg-6">
+    <h6>Message from child</h6>
+    <app-child  (messageFromChild)="receiveMessageFromChild($event)"></app-child>
+    <p>{{messageFromChild}}</p>
+  </div>
 </div>
 <div class="row">
-  <h6>Message from child</h6>
-  <app-child  (messageFromChild)="receiveMessageFromChild($event)"></app-child>
-  <p>{{messageFromChild}}</p>
+  <div class="col-lg-6">
+    <h6>Message From Other Component</h6>
+    <app-other-child></app-other-child>
+  </div>
 </div>
 
 </div>
