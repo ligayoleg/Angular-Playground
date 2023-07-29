@@ -10,7 +10,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'parent', component: ParentComponent},
   {path: 'of', component: OfComponent},
-  {path: 'operators', component: OperatorsComponent}
+  {path: 'operators', component: OperatorsComponent},
+  {path: 'bestPractices', loadChildren: () => import('./best-practices/best-practices.module').then(m => m.BestPracticesModule)}
 ];
 
 @NgModule({
