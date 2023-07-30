@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 // import { BrowserModule } from '@angular/platform-browser';
 import { BestPracticesRoutingModule } from './best-practices-routing.module';
 //Components
-import { BestPracticesHomeComponent } from './components/best-practices-home/best-practices-home.components';
+import { BestPracticesHomeComponent } from './best-practices-home/components/best-practices-home.components';
 
 
 

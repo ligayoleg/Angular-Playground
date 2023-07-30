@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BestPracticesHomeComponent } from './components/best-practices-home/best-practices-home.components';
+import { BestPracticesHomeComponent } from './best-practices-home/components/best-practices-home.components';
 
 
 
