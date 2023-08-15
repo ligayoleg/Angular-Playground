@@ -1,18 +1,42 @@
 <div class="container-fluid" height="100vh - 40px">
   <div class="row">
-
     <div class="col-sm-12">
       <best-practices-nav></best-practices-nav>
     </div>
     <div class="col-sm-12">
       <h1>Best Practices</h1>
     </div>
-    <div class="col-sm-12">
+    <div class="col-sm-12 col-md-6 col-lg-4">
       <ul>
         <li>L - Locate code quickly.</li>
         <li>I - Identify code at a glance.</li>
         <li>F - Flattest structure possible.</li>
         <li>T - Try to be DRY.</li>
+      </ul>
+    </div>
+    <div class="col-sm-12 col-md-6">
+      <p><i>Immutability</i> - not mutating existing objects in memory, but creating a new one.</p>
+      <span>using <i>this.object = {{"...this.object, classes: this.object.classes.concat(classId)"}}</i></span>
+    </div>
+  </div><!--row-->
+  <div class="row">
+    <div class="col-6">
+      <p>Use <i>feature</i> development organization style. Organize your folders/files by features. </p>
+      <p>If there are more than 7 files in the folder, consider making one or two subfolders.</p>
+      <p>Have a space in components import section to separate third party imports from your own imports.</p>
+      <p>Breakdown functions into smaller ones. If the function is more than 10 lines, try to break function into multiple smaller functions.</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <h6>Module organization</h6>
+    <div class="col-sm-12 col-md-6 col-lg-4">
+      <label>4 different types of modules</label>
+      <ul>
+        <li>Routing Module </li>
+        <li><s>Core Module</s></li>
+        <li>Shared Module</li>
+        <li>Feature Modules</li>
       </ul>
     </div>
   </div>

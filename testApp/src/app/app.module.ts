@@ -10,7 +10,6 @@ import { ParentComponent } from './sharing-data/components/parent/parent.compone
 import { ChildComponent } from './sharing-data/components/child/child.component';
 import { OperatorsComponent } from './rxjs/components/operators/operators.component';
 import { OfComponent } from './rxjs/components/of/of.component';
-import { TestComponent } from './test/test.component';
 import { NavComponent } from './layout/nav/components/nav.component';
 import { HomeComponent } from './layout/home/components/home.component';
 import { OtherChildComponent } from './sharing-data/components/otherChild/other-child.component';
@@ -25,7 +24,6 @@ import { OtherChildComponent } from './sharing-data/components/otherChild/other-
     ChildComponent,
     OfComponent,
     OperatorsComponent,
-    TestComponent,
     OtherChildComponent
   ],
   imports: [
