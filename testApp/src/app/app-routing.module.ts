@@ -11,7 +11,8 @@ const routes: Routes = [
   {path: 'parent', component: ParentComponent},
   {path: 'of', component: OfComponent},
   {path: 'operators', component: OperatorsComponent},
-  {path: 'bestPractices', loadChildren: () => import('./best-practices/best-practices.module').then(m => m.BestPracticesModule)}
+  {path: 'bestPractices', loadChildren: () => import('./best-practices/best-practices.module').then(m => m.BestPracticesModule)},
+  {path: 'books', loadChildren: ()=> import('./books/books.module').then(m => m.BooksModule)}
 ];
 
 @NgModule({

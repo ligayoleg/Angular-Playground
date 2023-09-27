@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 //Components
 import { AppComponent } from './app.component';
-
 import { ParentComponent } from './sharing-data/components/parent/parent.component';
 import { ChildComponent } from './sharing-data/components/child/child.component';
 import { OperatorsComponent } from './rxjs/components/operators/operators.component';

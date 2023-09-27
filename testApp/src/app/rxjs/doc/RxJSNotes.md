@@ -27,3 +27,9 @@ https://rxjs.dev/guide/overview
   getProducts(): Observable<Product[]>{
   return this.http.get<Product[]>(this.url);
   }
+
+### Handling Observable Errors
+
+- Catch the error
+- Optionally rethrow the error
+- Replace the errored Observable with a new Observable
