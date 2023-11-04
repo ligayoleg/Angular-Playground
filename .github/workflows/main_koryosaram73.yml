@@ -7,10 +7,10 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
+ 
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,12 +27,9 @@ jobs:
           npm install
           npm run build --if-present
 
-          
-
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'koryosaram73'
-      
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0F1FE68555C84F60983A22E0B62F94B5 }}
           package: ./testApp/dist/testApp
