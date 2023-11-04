@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-// import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { BooksRoutingModule } from './books-routing.module';
 
 //Components
@@ -16,7 +16,7 @@ import { BooksSearchComponent } from './books-home/components/books-search.compo
    BooksSearchComponent
   ],
   imports: [
-    // BrowserModule,
+    CommonModule,
     BooksRoutingModule
   ],
   providers: [],

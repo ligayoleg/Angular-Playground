@@ -14,6 +14,7 @@ import { HomeComponent } from './layout/home/components/home.component';
 import { OtherChildComponent } from './sharing-data/components/otherChild/other-child.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

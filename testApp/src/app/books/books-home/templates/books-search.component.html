@@ -1,36 +1,37 @@
 <div class="row">
   <div class="col-12">
-    <button class="btn btn-primary" (click)="loadBooks()">Load Books</button>
-    <!-- <table class="table">
+    <div class="btns">
+      <button class="btn btn-primary" (click)="loadBooks()">Load Books</button>
+      <button class="m-1 btn btn-primary" (click)="loadBooksNonGenre()">Load Only Non-Fiction</button>
+    </div>
+
+    <table class="table">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Description</th>
+          <th scope="col">Genre</th>
+          <th scope="col">Publisher</th>
+          <th scope="col">Published</th>
+          <th scope="col">ISBN</th>
+          <th scope="col">Image</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+        <tr *ngFor="let book of books">
+          <th scope="row">{{book.id}}</th>
+          <td>{{book.title}}</td>
+          <td>{{book.author}}</td>
+          <td>{{book.description}}</td>
+          <td>{{book.genre}}</td>
+          <td>{{book.publisher}}</td>
+          <td>{{book.published}}</td>
+          <td>{{book.isbn}}</td>
         </tr>
       </tbody>
-    </table> -->
+    </table>
 
   </div>
 </div>

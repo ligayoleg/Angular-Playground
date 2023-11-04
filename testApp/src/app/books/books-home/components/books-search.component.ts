@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { BooksService } from "../../services/books.service";
 import { Book } from "../../models/book";
+import { BookResponse } from "../../models/bookResponse";
+import { map } from "rxjs";
 
 
 
@@ -13,6 +15,10 @@ export class BooksSearchComponent implements OnInit{
   title = 'Books Search!';
   books: Book[] = [];
   ngOnInit(): void {
+    this.loadBooks();
+  }
+
+  ngOnDestroy(): void{
 
   }
 
@@ -23,8 +29,22 @@ export class BooksSearchComponent implements OnInit{
   }
 
   loadBooks(){
-    this._booksService.getBooks().subscribe(
-      b => this.books = b
+    this._booksService.getBooks()
+    .subscribe(
+      bookResponse => this.books = bookResponse.data
+    );
+  }
+
+
+  loadBooksNonGenre(){
+    this._booksService.getBooks()
+    .pipe(
+      map((res: BookResponse) => {
+        res.data.map(book => book.genre === "Non");
+      })
+    )
+    .subscribe(
+      bookResponse=> console.log(bookResponse)
     );
   }
 }
