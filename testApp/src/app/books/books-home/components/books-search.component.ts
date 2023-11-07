@@ -40,7 +40,7 @@ export class BooksSearchComponent implements OnInit{
     this._booksService.getBooks()
     .pipe(
       map((res: BookResponse) => {
-        res.data.map(book => book.genre === "Non");
+        res.data.map(book => book.genre === "Non")  ;
       })
     )
     .subscribe(
